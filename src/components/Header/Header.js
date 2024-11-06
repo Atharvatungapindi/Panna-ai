@@ -58,7 +58,11 @@ const Header = () => {
     "News & Insights",
   ];
   return (
-    <AppBar position="static" sx={{ bgcolor: "#F6F8F9" }} elevation={0}>
+    <AppBar
+      position="static"
+      sx={{ bgcolor: "#F6F8F9", padding: "0 50px" }}
+      elevation={0}
+    >
       <Toolbar disableGutters>
         <Logo xs="none" md="flex" />
         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

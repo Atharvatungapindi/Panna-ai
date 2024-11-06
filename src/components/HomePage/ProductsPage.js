@@ -21,7 +21,7 @@ const ProductsPage = () => {
   ];
 
   return (
-    <div style={{ background: "#F6F8F9" }}>
+    <div style={{ background: "#F6F8F9", padding: "0 50px" }}>
       <Box
         sx={{
           width: "100%",

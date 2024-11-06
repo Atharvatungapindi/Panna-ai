@@ -6,7 +6,7 @@ import PannaLabsAssistance from "./pages/PannaLabsAssistance";
 
 function App() {
   return (
-    <div style={{padding:'10px'}}>
+    <div>
       <Header />
       <HomePage />
       <PannaLabs />
