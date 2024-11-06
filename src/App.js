@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./components/footer/Footer";
+import Header from "./components/Header/Header";
+import HomePage from "./pages/HomePage";
+import PannaLabs from "./pages/PannaLabs";
+import PannaLabsAssistance from "./pages/PannaLabsAssistance";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{padding:'10px'}}>
+      <Header />
+      <HomePage />
+      <PannaLabs />
+      <PannaLabsAssistance />
+      <Footer />
     </div>
   );
 }
