@@ -29,6 +29,7 @@ const AboutPannaLab = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        textAlign: "center",
       }}
     >
       <Box>
@@ -37,9 +38,10 @@ const AboutPannaLab = () => {
             border: "1px solid #1B3139",
             color: "#000000",
             borderRadius: "20px",
-            width: "200px",
-            height: "50px",
+            width: { xs: "150px", sm: "200px" },
+            height: { xs: "40px", sm: "50px" },
             marginTop: { xs: "30px", md: "60px", lg: "80px" },
+            textTransform: "none",
           }}
         >
           How it works

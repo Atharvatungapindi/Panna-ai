@@ -14,15 +14,13 @@ import VoiceIcon from "../../assets/Images/VoiceGrid_logo.png";
 import PrachIcon from "../../assets/Images/prach_logo.png";
 import playIconImg from "../../assets/Images/icon play.svg";
 
-const Logo = ({ xs, md }) => {
+const Logo = () => {
   return (
     <Stack
       direction="row"
       className="logo"
       sx={{
         display: {
-          xs: xs,
-          md: md,
           flexGrow: 1,
           letterSpacing: "0.083px",
         },
@@ -65,8 +63,8 @@ const Contact = () => {
       lg: "normal 600 14px/normal OpenSans",
     },
     color: "#fff",
-    height: { xs: "40px", md: "50px" },
-    width: { xs: "150px", md: "315px" },
+    height: { xs: "25px", sm: "40px", lg: "50px" },
+    width: { xs: "180px", sm: "240px", lg: "315px" },
     overflow: "hidden",
   };
   const contactContent = [
@@ -104,9 +102,9 @@ const Contact = () => {
       {contactContent.map((item, index) => (
         <Grid item key={index}>
           <Card
-            style={{
-              width: "400px",
-              height: "660px",
+            sx={{
+              width: { xs: "260px", sm: "300px", md: "350px", lg: "400px" },
+              height: { xs: "360px", sm: "500px", md: "550px", lg: "660px" },
               backgroundImage: `url(${item.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -120,17 +118,16 @@ const Contact = () => {
             <Box
               sx={{
                 background: "#fff",
-                margin: "20px",
                 maxWidth: "339px",
                 maxHeight: "392px",
-                width: "100%",
-                height: "100%",
+                width: { xs: "85%", lg: "100%" },
+                height: { xs: "60%", lg: "100%" },
                 padding: "20px",
                 marginTop: "auto",
-                marginBottom: "20px",
-                display: "flex", 
+                marginBottom: { xs: "10px", lg: "20px" },
+                display: "flex",
                 flexDirection: "column",
-                justifyContent: "center", 
+                justifyContent: "center",
                 alignItems: "center",
               }}
             >
@@ -141,7 +138,10 @@ const Contact = () => {
                   component="img"
                   src={item.icon}
                   alt="icon"
-                  sx={{ width: "50px", height: "50px" }}
+                  sx={{
+                    width: { xs: "35px", sm: "50px" },
+                    height: { xs: "35px", sm: "50px" },
+                  }}
                 />
               )}
               <Typography
@@ -153,7 +153,8 @@ const Contact = () => {
                     lg: "normal 400 14px/normal OpenSans",
                   },
                   color: "#000",
-                  my: "24px",
+                  marginTop: { xs: "5px", sm: "10px", lg: "20px" },
+                  marginBottom: { xs: "5px", sm: "10px", lg: "20px" },
                 }}
               >
                 {item.text}
@@ -166,10 +167,7 @@ const Contact = () => {
                   justifyContent: "center",
                 }}
               >
-                <Button
-                  variant="contained"
-                  sx={{ ...btnStyles, marginTop: "10px" }}
-                >
+                <Button variant="contained" sx={{ ...btnStyles }}>
                   {item.button1}
                 </Button>
                 <div
@@ -181,14 +179,17 @@ const Contact = () => {
                 >
                   <Button
                     variant="outlined"
-                    sx={{ ...btnStyles, marginTop: "10px" }}
+                    sx={{
+                      ...btnStyles,
+                      marginTop: { xs: "3px", sm: "8px", lg: "10px" },
+                    }}
                   >
                     <Box
                       component="img"
                       src={item.playIcon}
                       alt="play icon"
                       sx={{
-                        width: "20px",
+                        width: { xs: "15px", sm: "20px" },
                         height: "20px",
                         marginRight: "5px",
                       }}

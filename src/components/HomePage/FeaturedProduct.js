@@ -25,12 +25,13 @@ const FeaturedProduct = () => {
         flexDirection: "column",
         alignItems: "center",
         padding: "0 50px",
+        textAlign: "center",
       }}
     >
       <Typography
         sx={{
           font: {
-            xs: "normal 600 32px/normal OpenSans",
+            xs: "normal 600 30px/normal OpenSans",
             sm: "normal 600 40px/normal OpenSans",
             md: "normal 600 44px/normal OpenSans",
             lg: "normal 600 48px/normal OpenSans",

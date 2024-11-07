@@ -71,7 +71,7 @@ const MainPage = () => {
             bottom: 0,
             right: 0,
             maxWidth: "250px",
-            width: { xs: "30%", md: "100%" },
+            width: { xs: "28%", sm: "20%", md: "21%",lg:'100%' },
           }}
         />
 

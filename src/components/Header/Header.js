@@ -24,6 +24,9 @@ const Logo = ({ xs, md }) => {
           flexGrow: 1,
           letterSpacing: "0.083px",
         },
+        
+        width: { xs: "50px", md: "100px" },
+        height: { xs: "50px", md: "100px" },
       }}
     >
       <Box component="img" src={LogoImg} />
@@ -32,16 +35,6 @@ const Logo = ({ xs, md }) => {
 };
 
 const Header = () => {
-  const btnStyle = {
-    textTransform: "none",
-    font: "normal 500 14px/normal 'Inter'",
-    color: "19467E",
-    letterSpacing: "0.168px",
-    borderRadius: "30px",
-    border: "1px solid #19467E",
-    height: { md: "40px", lg: "56px" },
-    width: { md: "90px", lg: "124px" },
-  };
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -60,7 +53,7 @@ const Header = () => {
   return (
     <AppBar
       position="static"
-      sx={{ bgcolor: "#F6F8F9", padding: "0 50px" }}
+      sx={{ bgcolor: "#F6F8F9", padding: { xs: "0 20px", md: "0 50px" } }}
       elevation={0}
     >
       <Toolbar disableGutters>
@@ -130,13 +123,36 @@ const Header = () => {
             </Button>
           ))}
         </Box>
-        <Stack direction="row" sx={{ gap: "1rem" }}>
-          <Box component="img" src={FrameImg} />
+        <Stack
+          direction="row"
+          sx={{ gap: "1rem", display: "flex", alignItems: "center" }}
+        >
+          <Box
+            component="img"
+            src={FrameImg}
+            sx={{
+              height: { xs: "50px", md: "50px" },
+              width: { xs: "30px", md: "30px" },
+            }}
+          />
           <Button
-            sx={{ ...btnStyle, background: "#054BB4" }}
-            variant="contained"
+            sx={{
+              background: "#203B44",
+              borderRadius: { xs: "10px", md: "20px" },
+              font: {
+                xs: "normal 600 10px/normal OpenSans",
+                sm: "normal 600 12px/normal OpenSans",
+                md: "normal 600 14px/normal OpenSans",
+                lg: "normal 600 14px/normal OpenSans",
+              },
+              color: "#fff",
+              height: { xs: "40px", md: "50px" },
+              width: { xs: "100px", md: "188px" },
+              overflow: "hidden",
+              textTransform: "none",
+            }}
           >
-            Sign up
+            Request a demo
           </Button>
         </Stack>
       </Toolbar>
