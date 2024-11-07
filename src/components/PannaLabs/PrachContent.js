@@ -66,7 +66,7 @@ const PrachContent = () => {
             background: "#203B44",
             borderRadius: "20px",
             paddingLeft: "40px",
-            paddingTop: "50px",
+            paddingTop: { xs: "30px", md: "50px" },
             marginBottom: { xs: "50px", md: "80px", lg: "120px" },
           }}
         >

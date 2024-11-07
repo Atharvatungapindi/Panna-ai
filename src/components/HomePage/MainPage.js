@@ -28,7 +28,10 @@ const MainPage = () => {
   };
 
   return (
-    <div className="h-screen" style={{ background: "#F6F8F9" }}>
+    <div
+      className="h-screen"
+      style={{ background: "#F6F8F9", textAlign: "center" }}
+    >
       <Box sx={{ position: "relative" }}>
         <Box
           component="img"
@@ -71,7 +74,7 @@ const MainPage = () => {
             bottom: 0,
             right: 0,
             maxWidth: "250px",
-            width: { xs: "28%", sm: "20%", md: "21%",lg:'100%' },
+            width: { xs: "28%", sm: "20%", md: "21%", lg: "100%" },
           }}
         />
 

@@ -65,7 +65,7 @@ const Chatbot = () => {
           sx={{
             borderRadius: "20px",
             background: "#203B44",
-            minHeight: { xs: "340px", sm: "465px" },
+            minHeight: { xs: "250px", sm: "465px", md: "440px", lg: "465px" },
             marginBottom: { xs: "50px", md: "80px", lg: "120px" },
           }}
         >
