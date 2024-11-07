@@ -107,6 +107,7 @@ const FeaturedProduct = () => {
         sx={{
           // p: { md: "20px", lg: "35px 100px" },
           justifyContent: "center",
+          marginBottom: { xs: "50px", md: "80px", lg: "120px" },
         }}
       >
         {Products.map((item) => {

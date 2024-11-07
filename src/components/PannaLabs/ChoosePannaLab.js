@@ -7,7 +7,7 @@ const ChoosePannaLab = () => {
     <div>
       <Grid
         container
-        sx={{ background: "#FBE2F0", padding: "50px 100px 50px 100px" }}
+        sx={{ background: "#FBE2F0", padding: {xs:"20px 30px 20px 30px",md:"50px 100px 50px 100px"} }}
         spacing={{ xs: 4, md: 8 }}
       >
         <Grid
