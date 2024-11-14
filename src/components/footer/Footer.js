@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import LogoImg from "../../assets/Images/Logo.png";
+import LogoImg from "../../assets/Images/Logo_img.jpg";
 import FacebookIcon from "../../assets/Images/logos_facebook.svg";
 import TwitterIcon from "../../assets/Images/prime_twitter.svg";
 import GlassdoorIcon from "../../assets/Images/simple-icons_glassdoor.svg";
@@ -88,6 +88,7 @@ const Footer = () => {
           justifyContent: "center",
           gap: "32px",
           marginBottom: "70px",
+          textAlign: "center",
         }}
       >
         <Typography

@@ -9,21 +9,21 @@ const Assistant = () => {
     <div>
       <Grid
         container
-        gap={{ sm: 2, lg: 5 }}
+        gap={{ xs: 1, sm: 2, lg: 5 }}
         sx={{
-          p: { md: "20px", lg: "35px 100px" },
           justifyContent: "center",
+          paddingTop: { xs: "25px", md: "50px", lg: "80px" },
         }}
       >
         {AssistantContent.map((item, index) => {
-          const backgroundColor = colors[index % colors.length]; // Cycle through colors
+          const backgroundColor = colors[index % colors.length];
           return (
-            <Grid sx={{ pt: "15px" }} key={item.title}>
+            <Grid key={item.title}>
               <CustomCard
                 item={item}
                 showLearnMore={false}
                 backgroundColor={backgroundColor}
-                alignment={item.alignment} // Pass the alignment prop
+                alignment={item.alignment}
               />
             </Grid>
           );

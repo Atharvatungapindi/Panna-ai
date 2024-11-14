@@ -29,7 +29,6 @@ const MainPage = () => {
 
   return (
     <div
-      className="h-screen"
       style={{ background: "#F6F8F9", textAlign: "center" }}
     >
       <Box sx={{ position: "relative" }}>

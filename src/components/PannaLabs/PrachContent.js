@@ -67,7 +67,7 @@ const PrachContent = () => {
             borderRadius: "20px",
             paddingLeft: "40px",
             paddingTop: { xs: "30px", md: "50px" },
-            marginBottom: { xs: "50px", md: "80px", lg: "120px" },
+            marginBottom: { xs: "25px", md: "50px", lg: "80px" },
           }}
         >
           <video

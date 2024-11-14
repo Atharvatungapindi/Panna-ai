@@ -2,7 +2,7 @@ import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
 
 const CustomCard = (props) => {
-  const { item, showLearnMore, backgroundColor } = props; // Accept alignment as a prop
+  const { item, showLearnMore, backgroundColor } = props; 
   return (
     <Card
       sx={{

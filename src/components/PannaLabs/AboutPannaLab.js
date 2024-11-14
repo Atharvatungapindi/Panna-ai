@@ -71,7 +71,7 @@ const AboutPannaLab = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: { xs: "50px", md: "80px", lg: "120px" },
+          marginBottom: { xs: "25px", md: "50px", lg: "80px" },
         }}
       >
         <Typography sx={subTextStyle}>Find what you need,</Typography>

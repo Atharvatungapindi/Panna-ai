@@ -7,7 +7,7 @@ const EduTechAi = () => {
     <div>
       <Grid
         container
-        sx={{ marginBottom: { xs: "50px", md: "80px", lg: "120px" } }}
+        sx={{ marginBottom: { xs: "25px", md: "50px", lg: "80px" } }}
         // order={{ xs: 2, sm: 1 }}
       >
         <Grid

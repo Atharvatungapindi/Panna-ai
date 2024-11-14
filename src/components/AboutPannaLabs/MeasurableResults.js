@@ -52,6 +52,7 @@ const MeasurableResults = () => {
           justifyContent: "center",
           marginTop: "50px",
           marginBottom: "80px",
+          textAlign: "center",
         }}
       >
         <Typography
@@ -138,7 +139,7 @@ const MeasurableResults = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingBottom: { xs: "50px", md: "80px", lg: "120px" },
+          paddingBottom: { xs: "25px", md: "50px", lg: "80px" },
         }}
       >
         <Button sx={btnStyles}>See Customer Stories</Button>

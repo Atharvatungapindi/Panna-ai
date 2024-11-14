@@ -8,7 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import LogoImg from "../../assets/Images/Logo.png";
+import LogoImg from "../../assets/Images/Logo_img.jpg";
 import FrameImg from "../../assets/Images/Frame.svg";
 import React from "react";
 
@@ -24,12 +24,29 @@ const Logo = ({ xs, md }) => {
           flexGrow: 1,
           letterSpacing: "0.083px",
         },
-        
         width: { xs: "50px", md: "100px" },
         height: { xs: "50px", md: "100px" },
       }}
     >
-      <Box component="img" src={LogoImg} />
+      <div
+        style={{
+          width: { xs: "50px", md: "80px" },
+          height: { xs: "50px", md: "80px" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          component="img"
+          src={LogoImg}
+          sx={{
+            width: { xs: "45px", md: "90px" },
+            height: { xs: "45px", md: "90px" },
+            borderRadius: { xs: "35px", md: "50px" },
+          }}
+        />
+      </div>
     </Stack>
   );
 };

@@ -21,13 +21,19 @@ const ProductsPage = () => {
   ];
 
   return (
-    <div style={{ background: "#F6F8F9", padding: "0 50px" }}>
+    <div
+      style={{
+        background: "#F6F8F9",
+        padding: "0 50px",
+      }}
+    >
       <Box
         sx={{
           width: "100%",
-          height: "100vh",
+          // height: "100vh",
           display: "flex",
           justifyContent: "center",
+          paddingTop: { xs: "25px", md: "50px", lg: "80px" },
         }}
       >
         <video width="100%" height="auto" autoPlay loop muted controls={false}>
@@ -40,7 +46,7 @@ const ProductsPage = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: { xs: "column", md: "row" },
-          marginTop: { xs: "50px", md: "80px", lg: "120px" },
+          marginTop: { xs: "25px", md: "50px", lg: "80px" },
         }}
       >
         <Box

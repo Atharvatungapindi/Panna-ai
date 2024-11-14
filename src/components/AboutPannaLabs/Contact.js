@@ -98,7 +98,13 @@ const Contact = () => {
   ];
 
   return (
-    <Grid container spacing={2} justifyContent="center" alignItems="center">
+    <Grid
+      container
+      spacing={2}
+      justifyContent="center"
+      alignItems="center"
+      sx={{ marginTop: { xs: "25px", md: "50px", lg: "80px" } }}
+    >
       {contactContent.map((item, index) => (
         <Grid item key={index}>
           <Card
