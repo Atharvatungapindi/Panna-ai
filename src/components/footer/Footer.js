@@ -125,7 +125,11 @@ const Footer = () => {
           <div>
             {" "}
             <Stack direction="row" sx={{ maxWidth: "50%", maxHeight: "50%" }}>
-              <Box component="img" src={LogoImg} />
+              <Box
+                component="img"
+                src={LogoImg}
+                sx={{ borderRadius: "50px" }}
+              />
             </Stack>
             <Typography
               variant="body2"
