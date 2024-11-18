@@ -199,7 +199,7 @@ const Footer = () => {
 
         {footerItems.map((footerItem, i) => {
           return (
-            <Grid size={{ xs: 6, sm: 3, md: 2 }} key={footerItem.title + i}>
+            <Grid size={{ xs: 6, sm: 3, md: 2.5 }} key={footerItem.title + i}>
               <Typography
                 variant="h6"
                 component="div"

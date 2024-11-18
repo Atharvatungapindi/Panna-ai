@@ -4,7 +4,6 @@ import CustomCard from "../customComponents/CustomCard";
 import AssistantContent from "./AssistantContent";
 
 const Assistant = () => {
-  const colors = ["#F1F1F1", "#EBF4FA", "#E1E6FA", "#F0E5F5"];
   return (
     <div>
       <Grid
@@ -16,13 +15,13 @@ const Assistant = () => {
         }}
       >
         {AssistantContent.map((item, index) => {
-          const backgroundColor = colors[index % colors.length];
           return (
             <Grid key={item.title}>
               <CustomCard
                 item={item}
                 showLearnMore={false}
-                backgroundColor={backgroundColor}
+                backgroundColor={item.backgroundColor}
+                hoverBackground={item.hoverBg}
                 alignment={item.alignment}
               />
             </Grid>
