@@ -12,17 +12,17 @@ const MainPage = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 2 } },
   };
 
   const fadeInDown = {
     hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 2 } },
   };
 
   const zoomIn = {
     hidden: { scale: 0.8, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 1 } },
+    visible: { scale: 1, opacity: 1, transition: { duration: 2 } },
   };
 
   const staggerContainer = {

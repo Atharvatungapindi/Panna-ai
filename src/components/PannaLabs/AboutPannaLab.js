@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const AboutPannaLab = () => {
   const textStyle = {
@@ -12,6 +13,7 @@ const AboutPannaLab = () => {
     color: "#9FA5A7",
     letterSpacing: "0.088px",
   };
+
   const subTextStyle = {
     color: "#252525",
     font: {
@@ -22,6 +24,16 @@ const AboutPannaLab = () => {
     },
     letterSpacing: "0.085px",
   };
+
+  const containerRef = useRef(null); // Ref for scrolling detection
+  const isInView = useInView(containerRef, { amount: 0.5 }); // Trigger once when in view
+
+  // Animation variants for fade-in
+  const fadeInVariant = {
+    hidden: { opacity: 0, y: 60 }, // Start hidden and slightly below
+    visible: { opacity: 1, y: 0, transition: { duration: 2 } }, // Fade in and move to original position
+  };
+
   return (
     <Box
       sx={{
@@ -48,6 +60,7 @@ const AboutPannaLab = () => {
         </Button>
       </Box>
       <Box
+        ref={containerRef} // Attach ref for scroll detection
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -57,13 +70,32 @@ const AboutPannaLab = () => {
           marginBottom: "8px",
         }}
       >
-        <Typography sx={textStyle}>
-          Pannalabs, your expert solution provider in Education and Neurodiverse{" "}
-        </Typography>
-        <Typography sx={textStyle}>
-          and your intelligent 24X7 chatbot support provider by harnessing
-        </Typography>
-        <Typography sx={textStyle}>advanced AI technology</Typography>
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"} // Trigger animation when in view
+          variants={fadeInVariant}
+        >
+          <Typography sx={textStyle}>
+            Pannalabs, your expert solution provider in Education and
+            Neurodiverse{" "}
+          </Typography>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"} // Trigger animation when in view
+          variants={fadeInVariant}
+        >
+          <Typography sx={textStyle}>
+            and your intelligent 24X7 chatbot support provider by harnessing
+          </Typography>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"} // Trigger animation when in view
+          variants={fadeInVariant}
+        >
+          <Typography sx={textStyle}>advanced AI technology</Typography>
+        </motion.div>
       </Box>
       <Box
         sx={{
@@ -74,8 +106,20 @@ const AboutPannaLab = () => {
           marginBottom: { xs: "25px", md: "50px", lg: "80px" },
         }}
       >
-        <Typography sx={subTextStyle}>Find what you need,</Typography>
-        <Typography sx={subTextStyle}>when you need it</Typography>
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"} // Trigger animation when in view
+          variants={fadeInVariant}
+        >
+          <Typography sx={subTextStyle}>Find what you need,</Typography>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"} // Trigger animation when in view
+          variants={fadeInVariant}
+        >
+          <Typography sx={subTextStyle}>when you need it</Typography>
+        </motion.div>
       </Box>
     </Box>
   );

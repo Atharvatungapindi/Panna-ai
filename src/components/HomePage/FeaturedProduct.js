@@ -1,10 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import CustomCard from "../customComponents/CustomCard";
 import Products from "../customComponents/Products";
 import Frame from "../../assets/Images/Frame 900.svg";
 import Circle1 from "../../assets/Images/circle.svg";
-import Circle2 from "../../assets/Images/circle.svg";
 
 const FeaturedProduct = () => {
   const textStyle = {
@@ -16,6 +15,28 @@ const FeaturedProduct = () => {
     },
     color: "#000",
   };
+
+  const cardStyle = {
+    borderRadius: "24px",
+    background: "#FCFDFD",
+    boxShadow:
+      "0px 616.182px 173.711px 0px rgba(0, 0, 0, 0.00), 0px 393.308px 157.323px 0px rgba(0, 0, 0, 0.01), 0px 222.874px 134.38px 0px rgba(0, 0, 0, 0.05), 0px 98.327px 98.327px 0px rgba(0, 0, 0, 0.09), 0px 26.221px 55.719px 0px rgba(0, 0, 0, 0.10)",
+    transformOrigin: "top",
+    "&:hover": {
+      backgroundColor: "#cee5ec94",
+      transform: "scale(1.05)",
+      color: "black",
+      boxShadow: "none",
+      backdropFilter: "blur(10px)",
+    },
+  };
+
+  const isScreenLarge = useMediaQuery("(min-width: 900px)");
+
+  // Don't render the component if the screen is below 900px
+  if (!isScreenLarge) {
+    return null;
+  }
 
   return (
     <div
@@ -65,7 +86,6 @@ const FeaturedProduct = () => {
       <Box
         sx={{
           position: "relative",
-
           marginBottom: "320px",
           marginTop: "280px",
         }}
@@ -73,12 +93,12 @@ const FeaturedProduct = () => {
         {/* Circle 2 */}
         <Box
           sx={{
-            width: { xs: "200px", md: "300px", lg: "500px" },
-            height: { xs: "200px", md: "300px", lg: "500px" },
+            width: { xs: "200px", md: "400px", lg: "500px" },
+            height: { xs: "200px", md: "400px", lg: "500px" },
           }}
         >
           <img
-            src={Circle2}
+            src={Circle1}
             alt="Circle 2"
             style={{
               position: "absolute",
@@ -119,80 +139,86 @@ const FeaturedProduct = () => {
         </Box>
 
         {/* Card grid: Place cards around the circle with gaps */}
+        {/* Card 1 - Top */}
         <Box
-          // container
-          // spacing={2}
+          // item
+          sx={{
+            minWidth: "318px",
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: {
+              md: "translate(-50%, -82%)",
+              lg: "translate(-50%, -70%)",
+            },
+            display: "flex",
+            justifyContent: "center",
+            transformOrigin: "center",
+          }}
+        >
+          <CustomCard
+            item={Products[0]}
+            showLearnMore={true}
+            customStyle={cardStyle}
+          />
+        </Box>
+        {/* Card 2 - Right */}
+        <Box
+          // item
           sx={{
             position: "absolute",
             top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
+            right: 0,
+            transform: { md: "translate(83%,-56%)", lg: "translate(70%,-58%)" },
+            minWidth: { lg: "318px" },
+            display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
+            transformOrigin: "center",
           }}
         >
-          {/* Card 1 - Top */}
-          <Box
-            // item
-            sx={{
-              position: "absolute",
-              left: { md: "60%", lg: "72%" },
-              bottom: { md: "77%", lg: "77%" },
-              transform: "translateX(-50%)",
-              width: "100%",
-              // border: "2px solid red",
-            }}
-          >
-            <CustomCard item={Products[0]} showLearnMore={true} />
-          </Box>
-          {/* Card 2 - Right */}
-          <Box
-            // item
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "95%",
-              transform: "translateY(-50%)",
-              width: "100%",
-              // border: "2px solid yellow",
-            }}
-          >
-            <CustomCard item={Products[1]} showLearnMore={true} />
-          </Box>
-          {/* Card 3 - Bottom */}
-          <Box
-            // item
-            sx={{
-              position: "absolute",
-              left: { md: "60%", lg: "72%" },
-              top: { md: "77%", lg: "77%" },
-              transform: "translateX(-50%)",
-              width: "100%",
-              // border: "2px solid green",
-            }}
-          >
-            <CustomCard item={Products[2]} showLearnMore={true} />
-          </Box>
-          {/* Card 4 - Left */}
-          <Box
-            // item
-            sx={{
-              position: "absolute",
-              top: { md: "50%", lg: "50%" },
-              right: { md: "71%", lg: "55%" },
-              transform: "translateY(-50%)",
-              width: "100%",
-              // border: "2px solid blue",
-            }}
-          >
-            <CustomCard
-              item={Products[3]}
-              showLearnMore={true}
-              sx={{ borderRadius: "80px" }}
-            />
-          </Box>
+          <CustomCard
+            item={Products[1]}
+            showLearnMore={true}
+            customStyle={cardStyle}
+          />
+        </Box>
+        {/* Card 3 - Bottom */}
+        <Box
+          // item
+          sx={{
+            position: "absolute",
+            transform: { md: "translate(15%,-45%)", lg: "translate(30%,-47%)" },
+            minWidth: "318px",
+            display: "flex",
+            justifyContent: "center",
+            transformOrigin: "center",
+          }}
+        >
+          <CustomCard
+            item={Products[2]}
+            showLearnMore={true}
+            customStyle={cardStyle}
+          />
+        </Box>
+        <Box
+          // item
+          sx={{
+            position: "absolute",
+            transform: {
+              md: "translate(-75%, -120%)",
+              lg: "translate(-70%, -140%)",
+            },
+            minWidth: "318px",
+            display: "flex",
+            justifyContent: "center",
+            transformOrigin: "center",
+          }}
+        >
+          <CustomCard
+            item={Products[3]}
+            showLearnMore={true}
+            customStyle={cardStyle}
+          />
         </Box>
       </Box>
     </div>

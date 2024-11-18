@@ -10,7 +10,7 @@ import {
 import React from "react";
 
 const CustomCard = (props) => {
-  const { item, showLearnMore, backgroundColor } = props;
+  const { item, showLearnMore, backgroundColor, customStyle } = props;
   return (
     <Card
       sx={{
@@ -25,12 +25,14 @@ const CustomCard = (props) => {
         backgroundColor: backgroundColor,
         transition: "transform 0.3s ease, background-color 0.2s ease",
         transformOrigin: "top",
+        cursor: "pointer",
         "&:hover": {
           // backgroundColor: ,
           transform: "scale(1.01, 1.06)",
           color: "white",
           boxShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
         },
+        ...customStyle,
       }}
     >
       <Box
