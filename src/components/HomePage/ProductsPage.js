@@ -24,22 +24,35 @@ const ProductsPage = () => {
     <div
       style={{
         background: "#F6F8F9",
-        padding: "0 50px",
       }}
     >
       <Box
         sx={{
-          width: "100%",
-          // height: "100vh",
+          // width: "95vw",
+          height: { xs: "auto", sm: "100vh" },
           display: "flex",
           justifyContent: "center",
-          paddingTop: { xs: "25px", md: "50px", lg: "80px" },
+          alignItems: "center",
+          overflow: "hidden", // Prevent scrollbars
+          margin: 0, // Remove default margins
         }}
       >
-        <video width="100%" height="auto" autoPlay loop muted controls={false}>
+        <video
+          style={{
+            maxWidth: "100%", // Ensure video doesn't exceed viewport width
+            maxHeight: "100%", // Ensure video doesn't exceed viewport height
+            width: "auto", // Maintain aspect ratio
+            height: "auto", // Maintain aspect ratio
+          }}
+          autoPlay
+          loop
+          muted
+          controls={false}
+        >
           <source src={PannaLabsVideo} type="video/mp4" />
         </video>
       </Box>
+
       <Box
         sx={{
           display: "flex",
@@ -47,6 +60,7 @@ const ProductsPage = () => {
           justifyContent: "center",
           flexDirection: { xs: "column", md: "row" },
           marginTop: { xs: "25px", md: "50px", lg: "80px" },
+          padding: "0 50px",
         }}
       >
         <Box

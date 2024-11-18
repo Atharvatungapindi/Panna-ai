@@ -10,11 +10,13 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import LogoImg from "../../assets/Images/Logo_img.jpg";
 import FrameImg from "../../assets/Images/Frame.svg";
-import React from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "../../App";
 
 const Logo = ({ xs, md }) => {
   return (
     <Stack
+      id="header"
       direction="row"
       className="logo"
       sx={{
@@ -52,6 +54,24 @@ const Logo = ({ xs, md }) => {
 };
 
 const Header = () => {
+  const { setMainHeight } = useContext(AppContext);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const updateMainHeight = () => {
+      const headerHeight = headerRef.current?.offsetHeight || 0;
+      const viewportHeight = window.innerHeight;
+      setMainHeight(viewportHeight - headerHeight);
+    };
+
+    // Calculate height on mount and on window resize
+    updateMainHeight();
+    window.addEventListener("resize", updateMainHeight);
+
+    // Cleanup event listener
+    return () => window.removeEventListener("resize", updateMainHeight);
+  }, []);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -72,6 +92,7 @@ const Header = () => {
       position="static"
       sx={{ bgcolor: "#F6F8F9", padding: { xs: "0 20px", md: "0 50px" } }}
       elevation={0}
+      ref={headerRef}
     >
       <Toolbar disableGutters>
         <Logo xs="none" md="flex" />

@@ -1,8 +1,16 @@
-import { Box, Button, Card, CardContent, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  darken,
+  emphasize,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 const CustomCard = (props) => {
-  const { item, showLearnMore, backgroundColor } = props; 
+  const { item, showLearnMore, backgroundColor } = props;
   return (
     <Card
       sx={{
@@ -15,6 +23,14 @@ const CustomCard = (props) => {
         border: "1px solid #E2E0E0",
         height: "100%",
         backgroundColor: backgroundColor,
+        transition: "transform 0.3s ease, background-color 0.2s ease",
+        transformOrigin: "top",
+        "&:hover": {
+          // backgroundColor: ,
+          transform: "scale(1.01, 1.06)",
+          color: "white",
+          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
+        },
       }}
     >
       <Box
@@ -44,7 +60,7 @@ const CustomCard = (props) => {
               lg: "normal 600 20px/normal OpenSans",
             },
             textAlign: "center",
-            color: "#000",
+            color: "inherit",
           }}
         >
           {item.title}
