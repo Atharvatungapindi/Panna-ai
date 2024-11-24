@@ -32,7 +32,7 @@ const MainPage = () => {
 
   const MainTextStyle = {
     font: {
-      xs: "normal 600 20px/normal Inter",
+      xs: "normal 600 28px/normal Inter",
       sm: "normal 600 40px/normal Inter",
       md: "normal 600 60px/normal Inter",
       lg: "normal 600 80px/normal Inter",
@@ -42,7 +42,7 @@ const MainPage = () => {
   };
   const subTextStyle = {
     font: {
-      xs: "normal 700 10px/normal OpenSans",
+      xs: "normal 700 12px/normal OpenSans",
       sm: "normal 700 18px/normal OpenSans",
       md: "normal 700 23px/normal OpenSans",
       lg: "normal 700 28px/normal OpenSans",
@@ -90,9 +90,9 @@ const MainPage = () => {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0 }} // Start fully transparent
-          animate={{ opacity: 1 }} // Fade to fully visible
-          transition={{ duration: 2 }} // Smooth fade-in over 1 second
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
         >
           <Box
             src={Image3}
@@ -108,9 +108,9 @@ const MainPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }} // Start fully transparent
-          animate={{ opacity: 1 }} // Fade to fully visible
-          transition={{ duration: 2 }} // Smooth fade-in over 1 second
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
         >
           <Box
             src={Image4}

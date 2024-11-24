@@ -20,16 +20,17 @@ const EduTechAi = () => {
   const rightGridRef = useRef(null);
 
   // Detect when grids are fully in view
-  const leftGridInView = useInView(leftGridRef, { amount: 0.25 }); // Fully in view
-  const rightGridInView = useInView(rightGridRef, { amount: 0.25 }); // Fully in view
+  const leftGridInView = useInView(leftGridRef);
+  const rightGridInView = useInView(rightGridRef);
 
   return (
     <div>
       <Grid
         container
-        sx={{ marginBottom: { xs: "25px", md: "50px", lg: "80px" } }}
+        sx={{
+          marginBottom: { xs: "25px", md: "50px", lg: "80px" },
+        }}
       >
-        {/* Left Grid */}
         <Grid
           size={{ xs: 12, sm: 12, md: 5, lg: 6 }}
           sx={{
@@ -40,8 +41,10 @@ const EduTechAi = () => {
             borderRadius: "20px",
             paddingLeft: { xs: "20px", sm: "30px", md: "40px", lg: "40px" },
             paddingTop: { xs: "30px", sm: "30px", md: "40px", lg: "40px" },
+
             paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "40px" },
           }}
+          order={{ xs: 2, lg: 1 }}
         >
           <motion.div
             ref={leftGridRef}
@@ -66,12 +69,12 @@ const EduTechAi = () => {
           </motion.div>
         </Grid>
 
-        {/* Right Grid */}
         <Grid
           container
           size={{ xs: 12, sm: 12, md: 7, lg: 6 }}
           justifyContent="center"
           alignItems="center"
+          order={{ xs: 1, md: 2 }}
         >
           <motion.div
             ref={rightGridRef}
@@ -90,6 +93,7 @@ const EduTechAi = () => {
                 justifyContent: "center",
                 paddingLeft: { xs: "0", md: "77px" },
                 paddingTop: { xs: "30px", md: "0" },
+                paddingBottom: { xs: "20px", md: "0px" },
               }}
             >
               <Stack direction="row">

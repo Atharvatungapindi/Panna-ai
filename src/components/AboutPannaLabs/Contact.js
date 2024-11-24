@@ -12,7 +12,7 @@ import VoiceContactImg from "../../assets/Images/Voice_contact_img.png";
 import EduTechContact from "../../assets/Images/EduTechImg.png";
 import VoiceIcon from "../../assets/Images/VoiceGrid_logo.png";
 import PrachIcon from "../../assets/Images/prach_logo.png";
-import playIconImg from "../../assets/Images/icon play.svg";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 const Logo = () => {
   return (
@@ -66,12 +66,16 @@ const Contact = () => {
     height: { xs: "25px", sm: "40px", lg: "50px" },
     width: { xs: "180px", sm: "240px", lg: "315px" },
     overflow: "hidden",
+    "&:hover": {
+      backgroundColor: "#ffffff",
+      color: "#203B44",
+      border: "1px solid #203B44",
+    },
   };
   const contactContent = [
     {
       image: PrachContactImg,
       icon: PrachIcon,
-      playIcon: playIconImg,
       text: `Redefines autism support with AI-powered tools that adapt to
                   each user’s unique needs, fostering independence and social
                   confidence in a soothing, sensory-friendly environment.
@@ -82,7 +86,6 @@ const Contact = () => {
     },
     {
       image: EduTechContact,
-      playIcon: playIconImg,
       text: `Unlock a new era of education where every learner’s potential is realized. Introducing Edutech, your AI personalized learning platform, adapting to each student’s pace and style for maximum engagement and growth.`,
       button1: "EXPLORE FEATURES",
       button2: "WATCH NOW",
@@ -90,7 +93,6 @@ const Contact = () => {
     {
       image: VoiceContactImg,
       icon: VoiceIcon,
-      playIcon: playIconImg,
       text: `Voice Grid leverages cutting-edge AI to transform voice interactions, delivering seamless, responsive communication across any platform. Empower your brand with voice technology that’s intuitive, fast, and effortlessly scalable.`,
       button1: "EXPLORE FEATURES",
       button2: "WATCH NOW",
@@ -119,6 +121,13 @@ const Contact = () => {
               justifyContent: "flex-start",
               alignItems: "center",
               color: "#fff",
+              position: "relative",  
+              overflow: "hidden", 
+              transition: "background-size 1s ease", // Transition only the background size
+              "&:hover": {
+                backgroundSize: "110%", // Zoom in effect by increasing the background-size
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", // Optional: adding shadow on hover
+              },
             }}
           >
             <Box
@@ -190,10 +199,7 @@ const Contact = () => {
                       marginTop: { xs: "3px", sm: "8px", lg: "10px" },
                     }}
                   >
-                    <Box
-                      component="img"
-                      src={item.playIcon}
-                      alt="play icon"
+                    <PlayCircleOutlineIcon
                       sx={{
                         width: { xs: "15px", sm: "20px" },
                         height: "20px",

@@ -77,7 +77,7 @@ const Footer = () => {
   return (
     <Box
       component="footer"
-      sx={{ background: "#1B3139", padding: "0px 50px 50px 80px" }}
+      sx={{ background: "#1B3139", padding: {xs:"0px 30px 30px 30px" ,md:"0px 50px 50px 50px" }}}
     >
       <Divider sx={{ mb: "50px" }} />
       <Box

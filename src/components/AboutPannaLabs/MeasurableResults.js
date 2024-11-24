@@ -50,8 +50,8 @@ const MeasurableResults = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: "50px",
-          marginBottom: "80px",
+          marginTop: {xs:"30px",md:"50px"},
+          marginBottom: {xs:'30px',md:"80px"},
           textAlign: "center",
         }}
       >

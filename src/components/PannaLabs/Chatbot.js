@@ -22,8 +22,8 @@ const Chatbot = () => {
   const rightGridRef = useRef(null);
 
   // Detect when grids are fully in view
-  const leftGridInView = useInView(leftGridRef, { amount: 0.5 }); // Fully in view
-  const rightGridInView = useInView(rightGridRef, { amount: 0.25 }); // Fully in view
+  const leftGridInView = useInView(leftGridRef); // Fully in view
+  const rightGridInView = useInView(rightGridRef); // Fully in view
 
   return (
     <div>

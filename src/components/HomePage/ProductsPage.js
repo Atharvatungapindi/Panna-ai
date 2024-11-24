@@ -60,7 +60,7 @@ const ProductsPage = () => {
           justifyContent: "center",
           flexDirection: { xs: "column", md: "row" },
           marginTop: { xs: "25px", md: "50px", lg: "80px" },
-          padding: "0 50px",
+          padding: {xs: "0 20px",md:"0 50px"},
         }}
       >
         <Box

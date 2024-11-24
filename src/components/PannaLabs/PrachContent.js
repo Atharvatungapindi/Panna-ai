@@ -21,12 +21,15 @@ const PrachContent = () => {
   const rightGridRef = useRef(null);
 
   // Track if elements are fully in view
-  const leftGridInView = useInView(leftGridRef, { amount: 0.25 });
-  const rightGridInView = useInView(rightGridRef, { amount: 0.25 });
+  const leftGridInView = useInView(leftGridRef);
+  const rightGridInView = useInView(rightGridRef);
 
   return (
     <div>
-      <Grid container>
+      <Grid
+        container
+        sx={{ marginBottom: { xs: "25px", md: "50px", lg: "80px" } }}
+      >
         {/* Left Grid */}
         <Grid
           size={{ xs: 12, sm: 12, md: 5, lg: 6 }}
@@ -100,7 +103,6 @@ const PrachContent = () => {
             borderRadius: "20px",
             paddingLeft: "40px",
             paddingTop: { xs: "30px", md: "50px" },
-            marginBottom: { xs: "25px", md: "50px", lg: "80px" },
           }}
         >
           <motion.div
