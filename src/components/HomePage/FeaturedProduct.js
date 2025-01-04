@@ -54,6 +54,7 @@ const FeaturedProduct = () => {
           flexDirection: "column",
           alignItems: "center",
           padding: "0 50px",
+          marginTop: "50px",
         }}
       >
         <Typography
@@ -61,8 +62,8 @@ const FeaturedProduct = () => {
             font: {
               xs: "normal 600 30px/normal OpenSans",
               sm: "normal 600 40px/normal OpenSans",
-              md: "normal 600 44px/normal OpenSans",
-              lg: "normal 600 48px/normal OpenSans",
+              md: "normal 600 40px/normal OpenSans",
+              lg: "normal 600 45px/normal OpenSans",
             },
             color: "#0B2821",
             letterSpacing: "0.072px",
@@ -73,20 +74,22 @@ const FeaturedProduct = () => {
         </Typography>
         <Typography sx={textStyle}>
           Explore our suite of innovative AI-powered tools designed to enhance
-          teaching and learning. Each product is
+          teaching and learning. Each product is crafted to provide educators
+          and students with the resources they need to succeed in a dynamic
+          educational landscape.
         </Typography>
-        <Typography sx={textStyle}>
+        {/* <Typography sx={textStyle}>
           crafted to provide educators and students with the resources they need
           to succeed in a dynamic
         </Typography>
-        <Typography sx={textStyle}>educational landscape.</Typography>
+        <Typography sx={textStyle}>educational landscape.</Typography> */}
       </Box>
 
       {/* Positioning container */}
       <Box
         sx={{
           position: "relative",
-          marginBottom: "320px",
+          marginBottom: "280px",
           marginTop: "280px",
         }}
       >

@@ -35,7 +35,7 @@ const MainPage = () => {
       xs: "normal 600 28px/normal Inter",
       sm: "normal 600 40px/normal Inter",
       md: "normal 600 60px/normal Inter",
-      lg: "normal 600 80px/normal Inter",
+      lg: "normal 600 70px/normal Inter",
     },
     color: "#0B2821",
     letterSpacing: "1px",

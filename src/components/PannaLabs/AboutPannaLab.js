@@ -8,7 +8,7 @@ const AboutPannaLab = () => {
       xs: "normal 600 12px/normal OpenSans",
       sm: "normal 600 16px/normal OpenSans",
       md: "normal 600 24px/normal OpenSans",
-      lg: "normal 600 35px/normal OpenSans",
+      lg: "normal 600 34px/normal OpenSans",
     },
     color: "#9FA5A7",
     letterSpacing: "0.088px",
@@ -20,7 +20,7 @@ const AboutPannaLab = () => {
       xs: "normal 600 12px/normal OpenSans",
       sm: "normal 600 16px/normal OpenSans",
       md: "normal 600 24px/normal OpenSans",
-      lg: "normal 600 34px/normal OpenSans",
+      lg: "normal 600 32px/normal OpenSans",
     },
     letterSpacing: "0.085px",
   };
@@ -77,10 +77,11 @@ const AboutPannaLab = () => {
         >
           <Typography sx={textStyle}>
             Pannalabs, your expert solution provider in Education and
-            Neurodiverse{" "}
+            Neurodiverse and your intelligent 24X7 chatbot support provider by
+            harnessing advanced AI technology
           </Typography>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"} // Trigger animation when in view
           variants={fadeInVariant}
@@ -95,7 +96,7 @@ const AboutPannaLab = () => {
           variants={fadeInVariant}
         >
           <Typography sx={textStyle}>advanced AI technology</Typography>
-        </motion.div>
+        </motion.div> */}
       </Box>
       <Box
         sx={{

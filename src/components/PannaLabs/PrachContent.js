@@ -30,7 +30,6 @@ const PrachContent = () => {
         container
         sx={{ marginBottom: { xs: "25px", md: "50px", lg: "80px" } }}
       >
-        {/* Left Grid */}
         <Grid
           size={{ xs: 12, sm: 12, md: 5, lg: 6 }}
           sx={{
@@ -50,12 +49,18 @@ const PrachContent = () => {
               flex: 1,
             }}
           >
-            <Box
-              component="img"
-              src={PrachImg}
-              alt="PrachImg"
-              sx={{ maxWidth: { xs: "90px", lg: "180px" }, mt: "20px" }}
-            />
+            <a
+              href="https://prach.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Box
+                component="img"
+                src={PrachImg}
+                alt="PrachImg"
+                sx={{ maxWidth: { xs: "90px", lg: "180px" }, mt: "20px" }}
+              />
+            </a>
             <Typography
               sx={{
                 font: {
@@ -92,7 +97,6 @@ const PrachContent = () => {
           </motion.div>
         </Grid>
 
-        {/* Right Grid */}
         <Grid
           size={{ xs: 12, sm: 12, md: 7, lg: 6 }}
           sx={{
